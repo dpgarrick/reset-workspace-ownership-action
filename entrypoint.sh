@@ -16,4 +16,4 @@ echo "Looking for files/directories in current working directory not owned by \"
 echo
 # find . ! -user $USER_UID -exec $SCRIPT_PATH/update_file_object.sh "{}" "$USER_UID" \;
 #find . ! -user $USER_UID -print0 | xargs -0 -I {} -P $( nproc ) bash -c 'file="{}"; uid="$USER_UID"; chown -cvf "$uid" "$file";'
-chown -R -cvf "$USER_UID" "$file"
+chown -R -cvf "$USER_UID" .
