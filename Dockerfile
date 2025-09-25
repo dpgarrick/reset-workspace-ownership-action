@@ -1,6 +1,4 @@
-ARG busybox_version=1.32.0
-
-FROM busybox:${busybox_version}
+FROM public.ecr.aws/docker/library/busybox:stable
 
 COPY *.sh /
 ENTRYPOINT ["/entrypoint.sh"]
